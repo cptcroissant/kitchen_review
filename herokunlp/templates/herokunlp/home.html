@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+h1 {
+    margin-left: 20px;
+}
+html {
+    font-size: 16px;
+    background: #red; /* fallback color */
+    background: linear-gradient(white, bisque);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+input {
+    background: #deb877;
+    background: linear-gradient(to top, #deb877 0%, #FFF8DC 36%, #FFFFF0 100%);
+    font-size: 14px; /* Размер шрифта */
+    padding: 5px 10px; /* Поля вокруг текста */
+    color: #191970; /* Цвет текста */
+    border: 1px solid #333; /* Параметры рамки */
+    border-radius: 20px; /* Радиус скругления */
+    }
+form {
+    margin-left: 20px;
+    padding-top: 15px;
+    font-size: 16px;
+    }
+  </style>
+</head>
+<body >
+<div style="font-size: 25px; margin-top:25px; margin-left: 20px; font-family: Verdana, sans-serif">Привет</div>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input style="margin-top:25px;" type="submit" value="Нажми меня нежно">
+    </form>
+</body>
+</html>
